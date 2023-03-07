@@ -5,6 +5,7 @@ SELECT p2.name AS nombre_producto,
 FROM ps_product p1
 JOIN ps_product_lang p2
 	ON p1.id_product = p2.id_product
+    AND active = 1
 JOIN ps_category_product pc1
 	ON p2.id_product = pc1.id_product
 JOIN ps_category_lang pc2
